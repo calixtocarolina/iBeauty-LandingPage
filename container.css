@@ -1,0 +1,98 @@
+.container{
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    padding: 0 3%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+header .menu-icon{
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+nav{
+    position: relative;
+}
+
+nav .menu-list{
+        list-style: none;
+        cursor: pointer;
+    }
+
+nav.active .menu-list{
+    transform: translateX(0);
+}
+
+nav .menu-list li{
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+nav .menu-list a{
+    color: var(--text-color-menu);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+nav .menu-list a:hover{
+    color: var(--text-color-black);
+}
+
+
+@media (max-width: 678px){
+
+    nav .menu-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    background-color: var(--background-color);
+    }
+    nav .menu-list li{
+        font-size: 30px;
+
+    }
+
+    .menu-button {
+        color: var(--primary-color);
+        font-size: 2rem;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        display: none;
+    }
+    main{
+        flex-wrap: wrap;
+    }
+    main .main-left{
+        width: 100%;
+        text-align: center; 
+        padding: 50px;
+    }
+    main .main-left h3{
+        font-size: 3rem;
+
+    }
+    main .main-right{
+        width: 100%;
+        margin: 50px 100px;
+
+    }
+}
